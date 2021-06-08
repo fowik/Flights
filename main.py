@@ -2,7 +2,6 @@ from flask import Flask, render_template
 
 app = Flask('app')
 
-
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -54,6 +53,10 @@ def reference():
 @app.route('/settings.html')
 def settings():
     return render_template("settings.html")
+
+@app.route('/panel.html')
+def panel():
+    return render_template("panel.html")
 
 
 app.run(host='0.0.0.0', port=8080)
